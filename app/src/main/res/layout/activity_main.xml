@@ -6,13 +6,61 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/layout_margin_top"
+        android:layout_marginBottom="@dimen/layout_margin_bottom"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TETRIS"
+            android:textSize="80sp"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/tv_high_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="High score: 0"
+            android:textSize="20sp"
+            android:layout_marginTop="@dimen/layout_margin_top"
+            tools:ignore="HardcodedText" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btn_new_game"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New game"
+                tools:ignore="HardcodedText" />
+
+          <Button
+              android:id="@+id/btn_reset_score"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="Reset score"
+              tools:ignore="HardcodedText" />
+
+            <Button
+                android:id="@+id/btn_exit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Exit"
+                tools:ignore="HardcodedText" />
+
+        </LinearLayout>
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
